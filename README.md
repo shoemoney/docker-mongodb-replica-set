@@ -35,10 +35,13 @@ It's probably not a good idea to run this setup in production as each mongo inst
 
 Once the container is running you can initialize the ReplicaSet with the following steps:
 
-* Access shell of container with `docker exec -it mongodb bash`
 * Access mongo shell with `mongo`
+```
+mongo --host 219.224.135.95 --port 27020
+```
 * `rs.initiate()` to initiate ReplicaSet
 * Use the output of previous step to grab the 'me' (hostname of the machine) property to add to ReplicaSet:
-	* port 27018: `rs.add('9488f884u84:27018')`
-	* port 27019: `rs.add('9488f884u84:27019')`
+```
+rs.add("219.224.135.95:27021")
+```
 * You can use `rs.status()` to see if your ReplicaSet has started successfully	
