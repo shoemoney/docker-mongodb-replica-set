@@ -23,7 +23,9 @@ Refer to [Dockerfile MongoDB](https://github.com/dockerfile/mongodb) for usage n
 
 #### Create container from image and open ports for ReplicaSet
 
-    docker run -d --hostname=219.224.135.94 --name=mongodb_rs_94_27020_27020 -p 27020:27020 -v /var/log/scrapy_guba_mongodb/:/var/log/mongodb/ -v /home/docker/docker-mongodb-replica-set/bin/:/mongodb/ -v /var/lib/scrapy_guba_mongodb/:/data/db mongodb_replica_set:0.1.0 /mongodb/start_rs_94_27020_27020.sh
+    docker run -d --hostname=219.224.135.94 --name=mongodb_rs_94_27020_27020 -p 27020:27020 -v /var/log/scrapy_guba_mongodb/:/var/log/mongodb/ -v /home/docker/docker-mongodb-replica-set/bin/:/mongodb/ -v /var/lib/scrapy_guba_mongodb/:/data/db/ mongodb_replica_set:0.1.0 /mongodb/start_rs_94_27020_27020.sh
+    
+    docker run -d --hostname=219.224.135.94 --name=mongodb_rs_94_27020_27021 -p 27021:27021 -v /var/log/scrapy_guba_mongodb/:/var/log/mongodb/ -v /home/docker/docker-mongodb-replica-set/bin/:/mongodb/ -v /var/lib/scrapy_guba_mongodb/:/data/db/ mongodb_replica_set:0.1.0 /mongodb/start_rs_94_27020_27021.sh
 
 #### Initiate ReplicaSet
 
